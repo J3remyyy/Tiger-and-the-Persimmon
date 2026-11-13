@@ -17,7 +17,15 @@ h1{font-size:20px;font-weight:600;margin:0 0 4px;letter-spacing:.01em}
 .actions{display:flex;gap:10px;margin:20px 0 6px}
 .actions button{flex:1;font:inherit;font-size:15px;padding:12px 10px;border-radius:12px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .actions button.primary{background:var(--ink);color:#fff}
-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:16px 0 8px;padding:4px 0}
+details{border-top:1px solid var(--line);margin:0;padding:4px 0}
+details+details{margin-bottom:8px;border-bottom:1px solid var(--line)}
+.actions+details{margin-top:16px}
+.about{font-size:15.5px;line-height:1.55;padding-bottom:12px}
+.about h3{font-size:12px;margin:16px 0 4px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:600}
+.about b{font-weight:650}
+.about p{margin:0 0 10px}
+.about .src{font-size:12.5px;color:var(--mute)}
+.about a{color:inherit}
 summary{cursor:pointer;padding:10px 0;font-weight:600;font-size:15px;list-style:none}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";float:right;font-weight:400}
@@ -52,6 +60,15 @@ footer{text-align:center;color:var(--mute);font-size:13px;margin-top:40px}
 <button class="primary" id="openStory">Read the whole story</button>
 <button id="toggleAll">Show all</button>
 </div>
+<details><summary>About the story</summary><div class="about">
+<h3>Where it comes from</h3>
+<p>A <b>Korean folktale</b>, passed on by word of mouth for centuries. Today it is one of Korea’s <b>best-loved children’s stories</b> – still told by grandparents.</p>
+<h3>Why it is told</h3>
+<p>Tigers once roamed Korea’s mountains and were <b>truly feared</b>. In folktales, though, the tiger is often <b>the fool</b> – laughing at the most dangerous animal is part of the fun.</p>
+<p>At its heart, it is about <b>fear of the unknown</b>: the tiger has never seen a gotgam, yet fears it more than anything. In the end, <b>wit beats strength</b>.</p>
+<h3>What is gotgam?</h3>
+<p><b>Dried persimmons</b>, hung on strings under the eaves to dry through the winter – a sweet treat for Korean holidays. That’s why they hang along the edge of the printed pages.</p>
+</div></details>
 <details><summary>How to read the symbols</summary><ul class="legend"><li><b><svg viewBox="0 0 44 60" width="22" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14,4 Q2,30 14,56 M30,4 Q42,30 30,56"/></g></svg></b><span>something that is said</span></li><li><b><svg viewBox="0 0 48 60" width="24" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14,4 A6.5,6.5 0 0 0 14,15 A6.5,6.5 0 0 0 14,26 A6.5,6.5 0 0 0 14,37 A6.5,6.5 0 0 0 14,48 A6.5,6.5 0 0 0 14,58 M14,4 Q17,3 18,5 M14,58 Q17,59 18,57"/><path d="M34,4 A6.5,6.5 0 0 1 34,15 A6.5,6.5 0 0 1 34,26 A6.5,6.5 0 0 1 34,37 A6.5,6.5 0 0 1 34,48 A6.5,6.5 0 0 1 34,58 M34,4 Q31,3 30,5 M34,58 Q31,59 30,57"/></g></svg></b><span>something that is thought</span></li><li><b><svg viewBox="0 0 44 60" width="22" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14,4 H6 V56 H14 M30,4 H38 V56 H30"/></g></svg></b><span>one unit: the object of a feeling, or things that belong together</span></li><li><b><svg viewBox="0 0 84 60" width="42" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-4,0)"><path d="M20,57 V42 L11,31 Q8,27 11.5,24.5 Q15,22.5 18,26 L22,31 V13 Q22,9 25.5,9 Q29,9 29,13 V27 V9 Q29,5 32.5,5 Q36,5 36,9 V27 V11 Q36,7 39.5,7 Q43,7 43,11 V28 V17 Q43,13 46,13 Q49,13 49,17 V40 Q49,50 43,54 V57"/><path d="M17,57 H46"/></g><path d="M58,20 L74,36 M74,20 L58,36"/></g></svg></b><span>stop / no more</span></li><li><b><svg viewBox="0 0 44 60" width="22" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-6,0)"><path d="M36,3 L16,33 H29 L22,59 L45,25 H32 L41,3 Z"/></g></g></svg></b><span>or else</span></li><li><b><svg viewBox="0 0 44 60" width="22" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12,14 H32 L22,30 Z" fill="#111"/></g></svg></b><span>on top of</span></li><li><b><svg viewBox="0 0 96 60" width="48" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4,30 H88 M80,24 L88,30 L80,36"/><circle cx="46" cy="30" r="4" fill="#111" stroke="none"/></g></svg></b><span>a dot on an arrow marks where someone is right now; a dashed line is still ahead</span></li><li><b><svg viewBox="0 0 84 60" width="42" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8,20 L28,40 M28,20 L8,40 M50,30 L60,40 L78,18"/></g></svg></b><span>wrong / right</span></li><li><b><svg viewBox="0 0 60 60" width="30" height="30" aria-hidden="true"><g fill="none" stroke="#111" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="30" r="22" stroke-dasharray="6 7"/></g></svg></b><span>a placeholder: something that is shown – it could be anything</span></li></ul></details>
 <ol id="rows">
 <li class="row"><button class="line" aria-expanded="false" aria-controls="t0">
